@@ -47,15 +47,14 @@ public class Main {
 
         }
 
-        for (Quarto quarto : hotel.getQuartos()) {
-            quarto.pegarChave(); // Devolve a chave na recepção ao sair
-
-        }
-
         try {
             Thread.sleep(5000); // Simula o tempo que os hóspedes passam passeando (5 segundos)
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+        for (Quarto quarto : hotel.getQuartos()) {
+            quarto.pegarChave(); // Devolve a chave na recepção ao sair
+
         }
 
         System.out.println(
